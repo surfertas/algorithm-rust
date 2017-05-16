@@ -29,13 +29,20 @@ pub fn selection_sort(collection: &mut [i32]) {
 
 fn main() {
     let mut vector = Vec::new();
+    let mut empty_vector = Vec::new();
+
     vector.push(0);
     vector.push(5);
     vector.push(3);
     vector.push(2);
     vector.push(2);
 
-    println!("{:?}", vector); 
+    println!("Vector: {:?}", vector); 
     selection_sort(&mut vector);
-    println!("{:?}", vector);
+    println!("Sorted vector: {:?}", vector);
+
+    selection_sort(&mut empty_vector);
+    println!("Empty vector: {:?}", empty_vector);
+    selection_sort(&mut empty_vector);
+
 }
